@@ -1,11 +1,12 @@
 import React from "react";
 import { useForm } from 'react-hook-form';
 import { createSprint } from '../../api/auth';
-function CreateSprint() {
+function CreateSprint(props) {
 	const { register, handleSubmit } = useForm();
 	
 	const onSubmit = (values) => {
 		createSprint(values);
+		props.changeView("allSprints")
 	};
 
 	return (

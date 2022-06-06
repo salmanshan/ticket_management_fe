@@ -6,6 +6,7 @@ function CreateTicket(props) {
 	
 	const onSubmit = (values) => {
 		createTicket(values);
+		props.changeView("allTickets");
 	};
 
 	return (

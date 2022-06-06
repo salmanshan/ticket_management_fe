@@ -48,8 +48,8 @@ const HomePage = () => {
             <button className='btn btn-primary' onClick={() => changeView("allSprints") }>View All Sprint</button>
 					</div>
           <div className='col-100'>
-            { createTicket && <CreateTicket /> }
-            { createSprint && <CreateSprint /> }
+            { createTicket && <CreateTicket changeView={changeView} /> }
+            { createSprint && <CreateSprint changeView={changeView} /> }
             { allTicket && <AllTickets /> }
             { allSprints && <AllSprints /> }
           </div>
